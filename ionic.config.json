@@ -1,0 +1,7 @@
+{
+  "name": "proRM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
