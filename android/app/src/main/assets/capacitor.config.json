@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "proRM",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
