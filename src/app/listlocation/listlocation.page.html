@@ -1,25 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>listlocation</ion-title>
+    <div *ngIf="characters"></div>
+    <ion-title>locationworld </ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref= "profile"></ion-back-button>
+      <ion-back-button defaultHref= "listWorld"></ion-back-button>
       </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-  <ion-row>
-  <ion-col sizeMd="4" offsetMd= "4">
-    <div *ngIf= "location">
-      <ion-card>
-      <ion-card-content class="ion-text-center">
-       <p>{{location.type}}</p>
-       <p>{{location.dimension}}</p>
-      </ion-card-content>
-      </ion-card>
-      </div>
-  </ion-col>
-  </ion-row>
-  </ion-grid>
+<ion-list>
+<ion-item *ngFor= "Let character of characters.residents"></ion-item>
+<ion-label>{{character}}</ion-label>
+</ion-item>
+</ion-list>
 </ion-content>

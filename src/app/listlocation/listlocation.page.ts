@@ -10,8 +10,9 @@ import { HttpClient} from '@angular/common/http';
 })
 export class ListlocationPage implements OnInit {
   
-  profileId: string;
-  location;
+  listlocationId:String
+  characters:String[];
+
   
 
   constructor(
@@ -20,9 +21,13 @@ export class ListlocationPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.profileId= this.activatedRoute.snapshot.paramMap.get('id')
-    this.http.get('https://rickandmortyapi.com/api/location' + this.profileId)
-    .subscribe(res => this.location = res);
+    this.listlocationId= this.activatedRoute.snapshot.paramMap.get('id')
+    this.http.get<any>('https://rickandmortyapi.com/api/location' + this.listlocationId)
+    .subscribe(res=>{
+      console.log(res)
+      this.characters=res;
+
+    })
   }
 
 }
